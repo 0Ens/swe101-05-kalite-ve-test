@@ -14,4 +14,7 @@ describe("add", () => {
   it("çok sayıda sayıyı toplar", () => {
     expect(add("1,2,3,4,5")).toBe(15);
   });
+  it("geçersiz karakter içeren girdi için hata fırlatır", () => {
+  expect(() => add("1,a")).toThrow();
+});
 });
