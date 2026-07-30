@@ -8,4 +8,7 @@ describe("add", () => {
   it("tek sayı için o sayıyı döner", () => {
     expect(add("1")).toBe(1);
   });
+  it("iki sayıyı virgülle ayırıp toplar", () => {
+    expect(add("1,2")).toBe(3);
+  });
 });
