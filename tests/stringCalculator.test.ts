@@ -11,4 +11,7 @@ describe("add", () => {
   it("iki sayıyı virgülle ayırıp toplar", () => {
     expect(add("1,2")).toBe(3);
   });
+  it("çok sayıda sayıyı toplar", () => {
+    expect(add("1,2,3,4,5")).toBe(15);
+  });
 });
