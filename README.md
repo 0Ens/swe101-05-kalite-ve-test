@@ -39,11 +39,23 @@ e2e/        -> Perde 3: Playwright e2e testleri
 
 ## Ne öğrendim
 
-_(TODO — üç perde bittikten sonra doldurulacak)_
+**Perde 1 — Bug avcısı:** Genel severity/priority derecelendirmesini yapmak beni
+zorladı; gerçek hayat senaryolarında ciddiyetin ne olacağını düşününce net karar
+veremediğim, "bu gerçekten bug mı yoksa tasarım böyle mi olmalı" diye kendime
+sorup arada kaldığım anlar oldu.
 
-## Teslim notları
+**Perde 2 — TDD katası:** En çarpıcı deneyimim, testi yazmadan önce kodun nasıl
+davranması gerektiğini net şekilde düşünmeye zorlanmamdı. `add` fonksiyonunu ilk
+yazmaya çalıştığımda TypeScript sözdizimine hâkim olmadığım için zorlandım
+(Python alışkanlığıyla karıştırdım), bu da bana dilin temel kurallarını (`==`
+yerine `===`, `{}` blokları, fonksiyon parametreleri) tekrar düşündürdü. Ayrıca 4. testin (çoklu sayı toplama) hiç kırmızıya düşmeden direkt yeşil geçmesi, iyi
+tasarlanmış bir kodun baştan genellenebilir olabileceğini gösterdi.
 
-- **Repo:** `https://github.com/0Ens/swe101-05-kalite-ve-test`
-- **Harcanan süre:** _(TODO)_
-- **Zorluk / keyif puanı:** _(TODO)_
-- **Öğrenme notu:** yukarıdaki "Ne öğrendim" bölümüne bakınız.
+**Perde 3 — İlk otomasyon:** Codegen'in ürettiği kod ile elle yazdığım kod
+arasındaki fark beni şaşırttı: codegen benim gereksiz tıklamalarımı (aynı
+input'a birden fazla tıklama, boş container'lara tıklama) birebir kaydediyordu,
+oysa elle yazınca sadece işe yarayan adımları (`fill`, `click`) bırakabildim.
+Ayrıca `shopping-car-link` gibi bir yazım hatasını incele (inspect) ile kontrol
+ederek yakaladım — bu, locator'ı tahmin etmek yerine doğrulamanın önemini
+gösterdi. `data-test` attribute'larının CSS class'larından veya görünen
+metinden neden daha sağlam olduğunu da bu süreçte kavradım.
