@@ -1,0 +1,17 @@
+{
+  "name": "swe101-05-kalite-ve-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:codegen": "playwright codegen https://www.saucedemo.com"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
